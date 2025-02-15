@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 
           <Link to="/sell">
             <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300">
-              Sell Your Coin
+              Buy Your Coin
             </button>
           </Link>
         </div>

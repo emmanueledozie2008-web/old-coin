@@ -10,7 +10,7 @@ const Body: React.FC = () => {
       <div className="py-16 bg-gradient-to-r from-teal-500 to-blue-500 text-white text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why Choose Us?</h2>
         <p className="text-base sm:text-lg max-w-3xl mx-auto mb-6">
-          Abrahams Coin Collection offers you a trustworthy platform for buying, selling, and grading your coins.
+          Abrahams Coin Collection offers you a trustworthy platform for buying  and grading your coins.
           Our mission is to connect passionate collectors with high-quality, authenticated coins for a smooth and secure transaction experience.
         </p>
         <Link to="/about">
@@ -59,7 +59,7 @@ const Body: React.FC = () => {
       <div className="py-16 bg-gradient-to-r from-blue-600 to-teal-600 text-white text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
         <p className="text-base sm:text-lg max-w-3xl mx-auto mb-6">
-          Buying, selling, and grading coins with Abrahams Coin Collection is easy and secure. Here’s how it works:
+          Buying,  and grading coins with Abrahams Coin Collection is easy and secure. Here’s how it works:
         </p>
         <div className="flex flex-wrap justify-center gap-12">
           <div className="w-64 sm:w-80">

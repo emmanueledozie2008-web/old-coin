@@ -54,7 +54,7 @@ const Marketplace: React.FC = () => {
               <p className="text-sm sm:text-base mt-1 text-center">Condition: {coin.condition}</p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <button className="mt-4 bg-black text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-gray-800 transition duration-300 w-full sm:w-auto">
-                  Sell Now
+                  Buy Now
                 </button>
               </a>
             </div>
