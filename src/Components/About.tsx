@@ -57,7 +57,7 @@ function About() {
             <p className="text-blue-700 text-center pt-3 text-base sm:text-lg px-4">
               ACC employs more than 30 full-time coin graders as well as outside
               consultants. To ensure impartiality, ACC and its full-time graders
-              do not buy  coins commercially, and strict procedures are
+              do not Sell  coins commercially, and strict procedures are
               in place to prevent consultants from influencing the grades
               assigned to their own submissions. The combined expertise of the
               ACC grading team results in unparalleled accuracy and consistency.
