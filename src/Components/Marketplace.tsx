@@ -50,11 +50,11 @@ const Marketplace: React.FC = () => {
           return (
             <div key={index} className="bg-white shadow-lg p-4 rounded-lg flex flex-col items-center">
               <h3 className="text-xl sm:text-2xl font-bold text-center">{coin.name}</h3>
-              <p className="text-lg sm:text-xl mt-2">Price: ${coin.price}</p>
+              <p className="text-lg sm:text-xl mt-2">Price: ZAR {coin.price}</p>
               <p className="text-sm sm:text-base mt-1 text-center">Condition: {coin.condition}</p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <button className="mt-4 bg-black text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-gray-800 transition duration-300 w-full sm:w-auto">
-                  Buy Now
+                  Sell Now
                 </button>
               </a>
             </div>

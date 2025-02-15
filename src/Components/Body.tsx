@@ -30,7 +30,7 @@ const Body: React.FC = () => {
               alt="Featured Coin 1"
               className="w-[50px] h-[50px] object-cover rounded-lg mb-4 transition-all duration-300 ease-in-out transform hover:scale-105"
             />
-            <h3 className="text-xl font-semibold mb-2">Gold Coin</h3>
+            <h3 className="text-xl font-semibold mb-2">Mandela Coin</h3>
             <p className="text-lg text-gray-700 mb-4">A beautiful gold coin from the 19th century. Rare and collectible.</p>
             <Link to="/marketplace">
               <button className="bg-teal-600 text-blue-600 px-6 py-3 rounded-lg font-bold text-2xl hover:bg-teal-700 transition duration-300">

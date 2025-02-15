@@ -10,8 +10,12 @@ const Hero: React.FC = () => {
           Welcome to Abrahams Coin Collection
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-8">
-          Buy and sell your old coins with us!
+          Buy  your old coins with us!
         </p>
+        <p className="text-base sm:text-lg md:text-xl mb-8">
+          (A onceoff license fee is applicable)
+        </p>
+      
 
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Link to="/about">
