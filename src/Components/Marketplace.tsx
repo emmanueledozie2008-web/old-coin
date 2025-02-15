@@ -40,20 +40,20 @@ const Marketplace: React.FC = () => {
   const phoneNumber = "+447961535440";  // Replace with your actual phone number (include country code without +)
 
   return (
-    <div className="p-6 bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400 w-[1330px]">
-      <h2 className="text-4xl font-bold mb-6 text-center text-white">Marketplace</h2>
+    <div className="p-4 sm:p-6 bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400 w-full">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-white">Marketplace</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {coins.map((coin, index) => {
           // WhatsApp URL with coin name and price
           const whatsappUrl = `https://wa.me/${phoneNumber}?text=I%20want%20to%20buy%20the%20${encodeURIComponent(coin.name)}%20coin%20for%20$${coin.price}`;
 
           return (
-            <div key={index} className="bg-white shadow-lg p-4 rounded-lg">
-              <h3 className="text-xl font-bold">{coin.name}</h3>
-              <p className="text-lg">Price: ${coin.price}</p>
-              <p className="text-sm">Condition: {coin.condition}</p>
+            <div key={index} className="bg-white shadow-lg p-4 rounded-lg flex flex-col items-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-center">{coin.name}</h3>
+              <p className="text-lg sm:text-xl mt-2">Price: ${coin.price}</p>
+              <p className="text-sm sm:text-base mt-1 text-center">Condition: {coin.condition}</p>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                <button className="mt-4 bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                <button className="mt-4 bg-black text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-gray-800 transition duration-300 w-full sm:w-auto">
                   Buy Now
                 </button>
               </a>
