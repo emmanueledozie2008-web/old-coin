@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
           <div className="pt-4">
           <Link to="/Sell">
           <button className="w-full bg-purple-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-          Sell Your Coin
+          Buy Your Coin
           </button>
           </Link>
           </div>
