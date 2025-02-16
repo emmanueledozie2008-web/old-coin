@@ -35,7 +35,7 @@ const SellCoin: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="coinPrice" className="block text-base sm:text-lg text-gray-800">Price ($)</label>
+            <label htmlFor="coinPrice" className="block text-base sm:text-lg text-gray-800">Price (Zar)</label>
             <input
               type="number"
               id="coinPrice"
