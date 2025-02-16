@@ -1,7 +1,7 @@
 import make from "../assets/our-grading.png";
 import Navbar from "./Navbar";
-import coin17 from "../assets/icon.jpg";
-import coin from "../assets/14763004658117789537.jpg";
+import coin17 from "../assets/coincoin.jpg";
+import coin from "../assets/coincoin2.jpg";
 import Footer from "./Footer";
 
 function About() {
