@@ -92,10 +92,10 @@ Tap sell coins at the top of our menu bar and fill the form …submit form once 
           </div>
           <div className="w-64 sm:w-80">
             <h3 className="text-2xl font-semibold mb-3">
-              Step 3: Coin Grading
+              Step 3: license fee 
             </h3>
             <p>
-            license fee 
+            
             Once you’re done with the license fee …you’ll receive 70 percent of your payment into your account… the Company Agent will come to collect coins and pay the remaining 30 percent payment immediately
             </p>
           </div>
