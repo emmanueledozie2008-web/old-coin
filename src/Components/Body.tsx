@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import coin1 from "../assets/coin17.jpg";
 import coin2 from "../assets/icon.jpg";
+import Footer from "./Footer";
 
 const features = [
   {
@@ -216,6 +217,7 @@ const Body: React.FC = () => {
           ))}
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
