@@ -1,108 +1,114 @@
 import React, { useState } from "react";
 import icon from "../assets/icon.jpg";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevState) => !prevState);
-  };
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Collection", path: "/Collection" },
+    // { name: "Sell Your Coin", path: "/sell" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/Contact" },
+  ];
+
+  const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
+    `px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200
+     ${
+       isActive
+         ? "bg-amber-100 text-amber-900"
+         : "text-amber-900 hover:bg-amber-50 hover:text-amber-800"
+     }`;
 
   return (
-    <nav className="bg-gradient-to-r from-purple-600 to-indigo-600 shadow-md fixed w-full top-0 z-50">
+    <nav className="bg-white shadow-lg border-b border-amber-100 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Left side: Logo or brand */}
-          <div className="flex items-center space-x-3">
-            <img src={icon} alt="logo" className="h-8 w-8 rounded-full" />
-            <a href="#" className="text-xl font-bold text-white hover:text-gray-200">
-              Abrahams Coin Collection
-            </a>
+        <div className="flex justify-between h-16">
+
+          {/* Logo */}
+          <div className="flex items-center">
+            <img
+              src={icon}
+              alt="Abrahams Coin Collection Logo"
+              className="h-10 w-10 rounded-full border-2 border-amber-800 p-0.5"
+            />
+            <div className="ml-3">
+              <Link
+                to="/"
+                className="text-xl font-bold text-amber-900 hover:text-amber-700"
+              >
+                Abrahams Coin Collection
+              </Link>
+              <p className="text-xs text-amber-600 hidden sm:block">
+                Trusted Numismatics Since 1995
+              </p>
+            </div>
           </div>
 
-          {/* Middle: Search bar (Responsive) */}
-          <div className="hidden md:flex items-center flex-1 mx-4">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center flex-1 justify-center space-x-1">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                className={navLinkClasses}
+              >
+                {item.name}
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
             <input
               type="text"
-              placeholder="Search..."
-              className="w-full max-w-xs px-3 py-1.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
+              placeholder="Search coins, years, mint..."
+              className="pl-4 pr-4 py-2 w-64 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-500 text-sm"
             />
+            
+            <button className="px-4 py-2 bg-amber-700 text-white text-sm font-medium rounded-lg hover:bg-amber-800">
+              Get Appraised
+            </button>
           </div>
 
-          {/* Right side: Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div>
-             <Link to="/about">
-            <button className="bg-purple-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-            About Us
-            </button>
-            </Link>
-            </div>
-            {/* second */}
-            <div className="">
-            <Link to="/Sell">
-            <button className="bg-purple-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-            Sell Your Coin
-            </button>
-            </Link>
-            </div>
-          </div>
-
-          {/* Mobile Menu Icon */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center">
             <button
-              className="text-black focus:outline-none"
-              onClick={toggleMobileMenu}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              className="p-2 text-amber-700 hover:bg-amber-50 rounded-md"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {isMobileMenuOpen ? "✕" : "☰"}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu - Display on smaller screens */}
-      <div
-        className={`md:hidden bg-purple-600 text-white p-4 ${
-          isMobileMenuOpen ? "block" : "hidden"
-        }`}
-      >
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-full px-3 py-1.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm mb-3"
-        />
-        <div className="space-y-3">
-          <div className="pb-3">
-        <Link to="/about">
-          <button className="w-full text-blue-500 bg-purple-600  px-4 py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-          About Us
-          </button>
-          </Link>
-          </div>
-          {/*  */}
-          <div className="pt-4">
-          <Link to="/Sell">
-          <button className="w-full bg-purple-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
-          Sell Your Coin
-          </button>
-          </Link>
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-amber-100 shadow-xl">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `block px-3 py-2 rounded-md text-base font-medium transition-colors
+                   ${
+                     isActive
+                       ? "bg-amber-100 text-amber-900"
+                       : "text-amber-900 hover:bg-amber-50"
+                   }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
