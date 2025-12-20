@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, Shield, Award } from "lucide-react";
+import { Mail,  MapPin, Clock, Shield, Award } from "lucide-react";
 
 const Footer: React.FC = () => {
   const emailAddress = "contact@abrahamscoincollection.com";

@@ -7,15 +7,12 @@ import {
   Filter, 
   Search, 
   PieChart, 
-  LineChart, 
-  Star, 
+  LineChart,  
   Crown,
-  TrendingDown,
   Heart,
   Shield,
   BarChart3,
   Eye,
-  Clock,
   Trophy,
   Sparkles,
   Layers,
@@ -25,7 +22,6 @@ import {
   Plus,
   Gift,
   Zap,
-  ChevronDown
 } from 'lucide-react';
 import Navbar from './Navbar';
 

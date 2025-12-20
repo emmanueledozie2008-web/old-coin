@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Users, Shield, MessageSquare, HelpCircle, Globe, Award } from 'lucide-react';
+import { Mail,  MapPin,  Send, CheckCircle, Users, Shield, MessageSquare, HelpCircle, Globe, Award } from 'lucide-react';
 import Navbar from './Navbar';
 
 const Contact: React.FC = () => {
