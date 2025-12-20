@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, TrendingUp, DollarSign, Award, Clock, Star, Heart, TrendingDown, Calendar, Tag, Shield } from 'lucide-react';
+import { Search, Filter, TrendingUp, DollarSign, Award, Clock, Star, Heart,  Calendar, Tag, Shield } from 'lucide-react';
 import Navbar from './Navbar';
 
 const Marketplace: React.FC = () => {
