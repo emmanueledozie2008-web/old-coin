@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
       const { name, email, subject, message, inquiryType } = formData;
       
       // Create mailto link
-      const mailtoLink = `mailto:contact@abrahamscoincollection.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:Collectioncoinscraft@gmail.com?subject=${encodeURIComponent(
         `${subject || `Contact Form - ${inquiryType}`}`
       )}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nInquiry Type: ${inquiryType}\n\nMessage:\n${message}\n\n---\nThis message was sent via the ACC Contact Form`
@@ -58,13 +58,19 @@ const Contact: React.FC = () => {
   };
 
   const contactMethods = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
-      details: "Collectioncoinscraft@gmail.com",
-      description: "For general inquiries and support",
-      action: () => window.location.href = "mailto:Collectioncoinscraft@gmail.com"
-    },
+   {
+  icon: <Mail className="w-6 h-6 text-amber-700" />,
+  title: "Email Us",
+  details: (
+    <span className="text-sm sm:text-base break-all">
+      Collectioncoinscraft@gmail.com
+    </span>
+  ),
+  description: "For general inquiries and support",
+  action: () =>
+    (window.location.href = "mailto:Collectioncoinscraft@gmail.com"),
+},
+
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Us",
@@ -264,7 +270,7 @@ const Contact: React.FC = () => {
                     <h3 className="text-2xl font-bold text-amber-900 mb-3">Message Sent Successfully!</h3>
                     <p className="text-amber-700 mb-6 max-w-md mx-auto">
                       Thank you for contacting Abrahams Coin Collection. Your email client should open shortly. 
-                      If it doesn't open automatically, please send your inquiry to contact@abrahamscoincollection.com
+                      If it doesn't open automatically, please send your inquiry to details: "Collectioncoinscraft@gmail.com", and we will respond as soon as possible.
                     </p>
                     <div className="bg-amber-100 p-4 rounded-lg max-w-md mx-auto">
                       <p className="text-amber-800 font-semibold">Next Steps:</p>

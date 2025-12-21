@@ -666,7 +666,7 @@ const Collection: React.FC = () => {
             Certified valuation for insurance, inheritance, or sale purposes by our expert numismatists.
           </p>
           <a
-            href="mailto:appraisal@abrahamscoincollection.com?subject=Collection%20Appraisal%20Request"
+            href="mailto:Collectioncoinscraft@gmail.com?subject=Collection%20Appraisal%20Request"
             className="inline-block bg-white text-amber-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
           >
             Request Professional Appraisal

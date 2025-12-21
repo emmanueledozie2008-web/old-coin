@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Mail,  MapPin, Clock, Shield, Award } from "lucide-react";
 
 const Footer: React.FC = () => {
-  const emailAddress = "contact@abrahamscoincollection.com";
+  const emailAddress = "Collectioncoinscraft@gmail.com";
   
   const businessHours = "Mon-Fri: 9AM-6PM | Sat: 10AM-4PM";
 
