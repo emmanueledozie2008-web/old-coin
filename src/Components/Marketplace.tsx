@@ -113,7 +113,7 @@ const Marketplace: React.FC = () => {
   const createEmailLink = (coin: any) => {
     const subject = `Inquiry about ${coin.name} - $${coin.price}`;
     const body = `Dear Abrahams Coin Collection,\n\nI am interested in purchasing the following coin:\n\n- Coin Name: ${coin.name}\n- Price: $${coin.price}\n- Year: ${coin.year}\n- Material: ${coin.material}\n- Condition: ${coin.condition}\n- Era: ${coin.era}\n\nPlease contact me with further details regarding purchase.`;
-    return `mailto:contact@abrahamscoincollection.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:Collectioncoinscraft@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -437,7 +437,7 @@ const Marketplace: React.FC = () => {
             Our experts can help you find rare and specific coins not listed in our marketplace.
           </p>
           <a
-            href="mailto:contact@abrahamscoincollection.com?subject=Custom%20Coin%20Search%20Request"
+            href="mailto:Collectioncoinscraft@gmail.com?subject=Custom%20Coin%20Search%20Request"
             className="inline-block bg-white text-amber-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
           >
             Request Custom Search
