@@ -98,31 +98,31 @@ const Collection: React.FC = () => {
     ));
   };
 
-  // Material color mapping
+  // Material color mapping (adjusted for dark theme)
   const materialColors: Record<string, string> = {
-    'Gold': 'bg-amber-500',
+    'Gold': 'bg-yellow-500',
     'Silver': 'bg-gray-400',
     'Copper': 'bg-amber-700',
     'Bronze': 'bg-yellow-800'
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
-      <Navbar/>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
+      <Navbar />
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-800 to-amber-700 text-white py-8 md:py-12">
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-yellow-500/20 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-2">My Coin Collection</h1>
-              <p className="text-amber-100">Track, manage, and showcase your valuable coin collection</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">My Coin Collection</h1>
+              <p className="text-gray-400">Track, manage, and showcase your valuable coin collection</p>
             </div>
             <div className="flex gap-3">
-              <button className="bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
+              <button className="bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-300 border border-yellow-500/20 px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
                 <Plus className="w-5 h-5" />
                 Add New Coin
               </button>
-              <button className="bg-white text-amber-800 px-6 py-3 rounded-xl font-semibold hover:bg-amber-100 transition-all duration-300 flex items-center gap-2">
+              <button className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition-all duration-300 flex items-center gap-2">
                 <Share2 className="w-5 h-5" />
                 Share Collection
               </button>
@@ -137,60 +137,60 @@ const Collection: React.FC = () => {
         <div className="mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Total Value Card */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
               <div className="flex items-center justify-between mb-4">
-                <div className="bg-amber-100 p-3 rounded-xl">
-                  <DollarSign className="w-8 h-8 text-amber-700" />
+                <div className="bg-yellow-500/20 p-3 rounded-xl">
+                  <DollarSign className="w-8 h-8 text-yellow-400" />
                 </div>
-                <span className="text-sm text-amber-600 font-semibold">Total Value</span>
+                <span className="text-sm text-gray-400 font-semibold">Total Value</span>
               </div>
-              <div className="text-3xl font-bold text-amber-900 mb-2">${totalValue.toLocaleString()}</div>
-              <div className="flex items-center text-green-600">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">${totalValue.toLocaleString()}</div>
+              <div className="flex items-center text-green-400">
                 <TrendingUp className="w-5 h-5 mr-1" />
                 <span className="text-sm font-semibold">+12.5% this month</span>
               </div>
             </div>
 
             {/* Coin Count Card */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
               <div className="flex items-center justify-between mb-4">
-                <div className="bg-amber-100 p-3 rounded-xl">
-                  <Layers className="w-8 h-8 text-amber-700" />
+                <div className="bg-yellow-500/20 p-3 rounded-xl">
+                  <Layers className="w-8 h-8 text-yellow-400" />
                 </div>
-                <span className="text-sm text-amber-600 font-semibold">Total Coins</span>
+                <span className="text-sm text-gray-400 font-semibold">Total Coins</span>
               </div>
-              <div className="text-3xl font-bold text-amber-900 mb-2">{collection.length}</div>
-              <div className="flex items-center text-amber-600">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">{collection.length}</div>
+              <div className="flex items-center text-gray-400">
                 <Calendar className="w-5 h-5 mr-1" />
                 <span className="text-sm">+3 this month</span>
               </div>
             </div>
 
             {/* Average Value Card */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
               <div className="flex items-center justify-between mb-4">
-                <div className="bg-amber-100 p-3 rounded-xl">
-                  <BarChart3 className="w-8 h-8 text-amber-700" />
+                <div className="bg-yellow-500/20 p-3 rounded-xl">
+                  <BarChart3 className="w-8 h-8 text-yellow-400" />
                 </div>
-                <span className="text-sm text-amber-600 font-semibold">Average Value</span>
+                <span className="text-sm text-gray-400 font-semibold">Average Value</span>
               </div>
-              <div className="text-3xl font-bold text-amber-900 mb-2">${averageValue.toLocaleString()}</div>
-              <div className="flex items-center text-green-600">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">${averageValue.toLocaleString()}</div>
+              <div className="flex items-center text-green-400">
                 <Zap className="w-5 h-5 mr-1" />
                 <span className="text-sm">Above market average</span>
               </div>
             </div>
 
             {/* Favorites Card */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
               <div className="flex items-center justify-between mb-4">
-                <div className="bg-amber-100 p-3 rounded-xl">
-                  <Heart className="w-8 h-8 text-amber-700" />
+                <div className="bg-yellow-500/20 p-3 rounded-xl">
+                  <Heart className="w-8 h-8 text-yellow-400" />
                 </div>
-                <span className="text-sm text-amber-600 font-semibold">Favorites</span>
+                <span className="text-sm text-gray-400 font-semibold">Favorites</span>
               </div>
-              <div className="text-3xl font-bold text-amber-900 mb-2">{favoriteCount}</div>
-              <div className="flex items-center text-pink-600">
+              <div className="text-3xl font-bold text-yellow-300 mb-2">{favoriteCount}</div>
+              <div className="flex items-center text-pink-400">
                 <Sparkles className="w-5 h-5 mr-1" />
                 <span className="text-sm">Personal highlights</span>
               </div>
@@ -202,16 +202,16 @@ const Collection: React.FC = () => {
           {/* Left Column - Charts and Analysis */}
           <div className="lg:col-span-2 space-y-8">
             {/* Value Timeline Chart Widget */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-amber-900 flex items-center">
+                  <h3 className="text-xl font-bold text-yellow-300 flex items-center">
                     <LineChart className="w-6 h-6 mr-2" />
                     Collection Value Timeline
                   </h3>
-                  <p className="text-amber-600 text-sm">Value growth over the past 6 months</p>
+                  <p className="text-gray-400 text-sm">Value growth over the past 6 months</p>
                 </div>
-                <select className="px-4 py-2 border border-amber-300 rounded-lg text-amber-800 bg-white">
+                <select className="px-4 py-2 bg-gray-800 border border-yellow-500/20 rounded-lg text-gray-300 focus:ring-2 focus:ring-yellow-500">
                   <option>Last 6 months</option>
                   <option>Last year</option>
                   <option>All time</option>
@@ -221,12 +221,12 @@ const Collection: React.FC = () => {
               <div className="h-64 flex items-end justify-between pt-8">
                 {timelineData.map((item, index) => (
                   <div key={index} className="flex flex-col items-center">
-                    <div className="text-xs text-amber-600 mb-2">{item.month}</div>
+                    <div className="text-xs text-gray-400 mb-2">{item.month}</div>
                     <div 
-                      className="w-10 bg-gradient-to-t from-amber-600 to-amber-400 rounded-t-lg relative group cursor-pointer"
+                      className="w-10 bg-gradient-to-t from-yellow-600 to-yellow-400 rounded-t-lg relative group cursor-pointer"
                       style={{ height: `${(item.value / 20000) * 200}px` }}
                     >
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-amber-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-yellow-300 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-yellow-500/20">
                         ${item.value * 1000}
                       </div>
                     </div>
@@ -234,18 +234,18 @@ const Collection: React.FC = () => {
                 ))}
               </div>
               
-              <div className="flex justify-between items-center mt-6 pt-6 border-t border-amber-200">
+              <div className="flex justify-between items-center mt-6 pt-6 border-t border-yellow-500/20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-900">${totalValue.toLocaleString()}</div>
-                  <div className="text-sm text-amber-600">Current Value</div>
+                  <div className="text-2xl font-bold text-yellow-300">${totalValue.toLocaleString()}</div>
+                  <div className="text-sm text-gray-400">Current Value</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">+$7,200</div>
-                  <div className="text-sm text-amber-600">Total Growth</div>
+                  <div className="text-2xl font-bold text-green-400">+$7,200</div>
+                  <div className="text-sm text-gray-400">Total Growth</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-amber-900">+28%</div>
-                  <div className="text-sm text-amber-600">ROI</div>
+                  <div className="text-2xl font-bold text-yellow-300">+28%</div>
+                  <div className="text-sm text-gray-400">ROI</div>
                 </div>
               </div>
             </div>
@@ -253,8 +253,8 @@ const Collection: React.FC = () => {
             {/* Collection Composition Widget */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Material Breakdown */}
-              <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
-                <h3 className="text-xl font-bold text-amber-900 mb-6 flex items-center">
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
+                <h3 className="text-xl font-bold text-yellow-300 mb-6 flex items-center">
                   <PieChart className="w-6 h-6 mr-2" />
                   Material Breakdown
                 </h3>
@@ -263,29 +263,29 @@ const Collection: React.FC = () => {
                   {Object.entries(materialComposition).map(([material, count]) => (
                     <div key={material} className="flex items-center justify-between">
                       <div className="flex items-center">
-                        <div className={`w-4 h-4 rounded-full mr-3 ${materialColors[material] || 'bg-amber-400'}`}></div>
-                        <span className="text-amber-800 font-medium">{material}</span>
+                        <div className={`w-4 h-4 rounded-full mr-3 ${materialColors[material] || 'bg-yellow-400'}`}></div>
+                        <span className="text-gray-300 font-medium">{material}</span>
                       </div>
                       <div className="flex items-center">
-                        <span className="text-amber-900 font-bold mr-2">{count}</span>
-                        <span className="text-amber-600 text-sm">({Math.round((count / collection.length) * 100)}%)</span>
+                        <span className="text-yellow-300 font-bold mr-2">{count}</span>
+                        <span className="text-gray-400 text-sm">({Math.round((count / collection.length) * 100)}%)</span>
                       </div>
                     </div>
                   ))}
                 </div>
                 
-                <div className="mt-6 pt-6 border-t border-amber-200">
+                <div className="mt-6 pt-6 border-t border-yellow-500/20">
                   <div className="flex -space-x-2">
                     {collection.slice(0, 5).map(coin => (
                       <div 
                         key={coin.id}
-                        className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 border-2 border-white flex items-center justify-center text-white font-bold text-sm"
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 border-2 border-gray-800 flex items-center justify-center text-gray-900 font-bold text-sm"
                       >
                         {coin.material.charAt(0)}
                       </div>
                     ))}
                     {collection.length > 5 && (
-                      <div className="w-10 h-10 rounded-full bg-amber-100 border-2 border-white flex items-center justify-center text-amber-800 font-bold text-sm">
+                      <div className="w-10 h-10 rounded-full bg-gray-700 border-2 border-gray-800 flex items-center justify-center text-gray-300 font-bold text-sm">
                         +{collection.length - 5}
                       </div>
                     )}
@@ -294,8 +294,8 @@ const Collection: React.FC = () => {
               </div>
 
               {/* Top Performing Coins */}
-              <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
-                <h3 className="text-xl font-bold text-amber-900 mb-6 flex items-center">
+              <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
+                <h3 className="text-xl font-bold text-yellow-300 mb-6 flex items-center">
                   <Trophy className="w-6 h-6 mr-2" />
                   Top Performers
                 </h3>
@@ -305,21 +305,21 @@ const Collection: React.FC = () => {
                     .sort((a, b) => b.price - a.price)
                     .slice(0, 3)
                     .map((coin, index) => (
-                      <div key={coin.id} className="flex items-center p-4 bg-amber-50 rounded-xl">
+                      <div key={coin.id} className="flex items-center p-4 bg-gray-700/50 rounded-xl">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-4 ${
-                          index === 0 ? 'bg-amber-500 text-white' : 
-                          index === 1 ? 'bg-amber-400 text-white' : 
-                          'bg-amber-300 text-amber-900'
+                          index === 0 ? 'bg-yellow-500 text-gray-900' : 
+                          index === 1 ? 'bg-yellow-400 text-gray-900' : 
+                          'bg-yellow-300 text-gray-900'
                         }`}>
                           <Crown className="w-5 h-5" />
                         </div>
                         <div className="flex-1">
-                          <div className="font-semibold text-amber-900">{coin.name}</div>
-                          <div className="text-sm text-amber-600">{coin.year} • {coin.era}</div>
+                          <div className="font-semibold text-gray-200">{coin.name}</div>
+                          <div className="text-sm text-gray-400">{coin.year} • {coin.era}</div>
                         </div>
                         <div className="text-right">
-                          <div className="font-bold text-amber-800">${coin.price.toLocaleString()}</div>
-                          <div className="text-sm text-green-600 flex items-center">
+                          <div className="font-bold text-yellow-300">${coin.price.toLocaleString()}</div>
+                          <div className="text-sm text-green-400 flex items-center">
                             <TrendingUp className="w-3 h-3 mr-1" />
                             +15%
                           </div>
@@ -328,7 +328,7 @@ const Collection: React.FC = () => {
                     ))}
                 </div>
                 
-                <button className="w-full mt-6 py-3 text-amber-700 hover:text-amber-800 font-semibold flex items-center justify-center gap-2">
+                <button className="w-full mt-6 py-3 text-yellow-400 hover:text-yellow-300 font-semibold flex items-center justify-center gap-2">
                   View Performance Report
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -336,36 +336,36 @@ const Collection: React.FC = () => {
             </div>
 
             {/* Collection Management Tools */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
-              <h3 className="text-xl font-bold text-amber-900 mb-6">Collection Tools</h3>
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
+              <h3 className="text-xl font-bold text-yellow-300 mb-6">Collection Tools</h3>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <button className="flex flex-col items-center p-4 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3">
-                    <Download className="w-6 h-6 text-amber-700" />
+                <button className="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700 transition-colors">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
+                    <Download className="w-6 h-6 text-yellow-400" />
                   </div>
-                  <span className="text-sm font-semibold text-amber-800">Export Data</span>
+                  <span className="text-sm font-semibold text-gray-300">Export Data</span>
                 </button>
                 
-                <button className="flex flex-col items-center p-4 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3">
-                    <Eye className="w-6 h-6 text-amber-700" />
+                <button className="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700 transition-colors">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
+                    <Eye className="w-6 h-6 text-yellow-400" />
                   </div>
-                  <span className="text-sm font-semibold text-amber-800">Insurance Report</span>
+                  <span className="text-sm font-semibold text-gray-300">Insurance Report</span>
                 </button>
                 
-                <button className="flex flex-col items-center p-4 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3">
-                    <Gift className="w-6 h-6 text-amber-700" />
+                <button className="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700 transition-colors">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
+                    <Gift className="w-6 h-6 text-yellow-400" />
                   </div>
-                  <span className="text-sm font-semibold text-amber-800">Gift Valuation</span>
+                  <span className="text-sm font-semibold text-gray-300">Gift Valuation</span>
                 </button>
                 
-                <button className="flex flex-col items-center p-4 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-3">
-                    <Shield className="w-6 h-6 text-amber-700" />
+                <button className="flex flex-col items-center p-4 bg-gray-700/50 rounded-xl hover:bg-gray-700 transition-colors">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-3">
+                    <Shield className="w-6 h-6 text-yellow-400" />
                   </div>
-                  <span className="text-sm font-semibold text-amber-800">Secure Storage</span>
+                  <span className="text-sm font-semibold text-gray-300">Secure Storage</span>
                 </button>
               </div>
             </div>
@@ -374,21 +374,21 @@ const Collection: React.FC = () => {
           {/* Right Column - Filters and Collection List */}
           <div className="space-y-8">
             {/* Filters Widget */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
-              <h3 className="text-xl font-bold text-amber-900 mb-6 flex items-center">
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
+              <h3 className="text-xl font-bold text-yellow-300 mb-6 flex items-center">
                 <Filter className="w-6 h-6 mr-2" />
                 Filter Collection
               </h3>
               
               <div className="space-y-6">
                 <div>
-                  <label className="block text-amber-800 font-semibold mb-2">Search Coins</label>
+                  <label className="block text-gray-300 font-semibold mb-2">Search Coins</label>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-amber-500" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-yellow-500" />
                     <input
                       type="text"
                       placeholder="Search by name, year..."
-                      className="w-full pl-10 pr-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-yellow-500/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200 placeholder-gray-500"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -396,9 +396,9 @@ const Collection: React.FC = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-amber-800 font-semibold mb-2">Sort By</label>
+                  <label className="block text-gray-300 font-semibold mb-2">Sort By</label>
                   <select
-                    className="w-full px-4 py-3 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white"
+                    className="w-full px-4 py-3 bg-gray-800 border border-yellow-500/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-300"
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                   >
@@ -411,15 +411,15 @@ const Collection: React.FC = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-amber-800 font-semibold mb-2">Historical Era</label>
+                  <label className="block text-gray-300 font-semibold mb-2">Historical Era</label>
                   <div className="grid grid-cols-2 gap-2">
                     {['All', 'Ancient', 'Medieval', 'Victorian', 'Modern'].map((era) => (
                       <button
                         key={era}
                         className={`px-4 py-2 rounded-lg transition-colors ${
                           selectedEra === era 
-                            ? 'bg-amber-700 text-white' 
-                            : 'bg-amber-50 text-amber-700 hover:bg-amber-100'
+                            ? 'bg-yellow-500 text-gray-900' 
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         }`}
                         onClick={() => setSelectedEra(era)}
                       >
@@ -430,15 +430,15 @@ const Collection: React.FC = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-amber-800 font-semibold mb-2">Material</label>
+                  <label className="block text-gray-300 font-semibold mb-2">Material</label>
                   <div className="grid grid-cols-2 gap-2">
                     {['All', 'Gold', 'Silver', 'Copper'].map((material) => (
                       <button
                         key={material}
                         className={`px-4 py-2 rounded-lg transition-colors ${
                           selectedMaterial === material 
-                            ? 'bg-amber-700 text-white' 
-                            : 'bg-amber-50 text-amber-700 hover:bg-amber-100'
+                            ? 'bg-yellow-500 text-gray-900' 
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                         }`}
                         onClick={() => setSelectedMaterial(material)}
                       >
@@ -448,18 +448,18 @@ const Collection: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="pt-4 border-t border-amber-200">
+                <div className="pt-4 border-t border-yellow-500/20">
                   <div className="flex items-center justify-between">
-                    <span className="text-amber-800 font-semibold">Results:</span>
-                    <span className="text-amber-900 font-bold">{filteredCollection.length} coins</span>
+                    <span className="text-gray-300 font-semibold">Results:</span>
+                    <span className="text-yellow-300 font-bold">{filteredCollection.length} coins</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Collection Achievement Widget */}
-            <div className="bg-gradient-to-br from-amber-800 to-amber-700 text-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-bold mb-6 flex items-center">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-yellow-500/20 text-gray-200 rounded-2xl shadow-xl p-6">
+              <h3 className="text-xl font-bold text-yellow-300 mb-6 flex items-center">
                 <Award className="w-6 h-6 mr-2" />
                 Collection Achievements
               </h3>
@@ -468,12 +468,12 @@ const Collection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold">Diversity Master</div>
-                    <div className="text-amber-200 text-sm">Collect from 3+ eras</div>
+                    <div className="text-gray-400 text-sm">Collect from 3+ eras</div>
                   </div>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     new Set(collection.map(c => c.era)).size >= 3 
-                      ? 'bg-amber-400' 
-                      : 'bg-amber-900'
+                      ? 'bg-yellow-500 text-gray-900' 
+                      : 'bg-gray-700 text-gray-400'
                   }`}>
                     {new Set(collection.map(c => c.era)).size >= 3 ? '✓' : '3'}
                   </div>
@@ -482,12 +482,12 @@ const Collection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold">Gold Collector</div>
-                    <div className="text-amber-200 text-sm">5+ gold coins</div>
+                    <div className="text-gray-400 text-sm">5+ gold coins</div>
                   </div>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     collection.filter(c => c.material === 'Gold').length >= 5 
-                      ? 'bg-amber-400' 
-                      : 'bg-amber-900'
+                      ? 'bg-yellow-500 text-gray-900' 
+                      : 'bg-gray-700 text-gray-400'
                   }`}>
                     {collection.filter(c => c.material === 'Gold').length >= 5 ? '✓' : '5'}
                   </div>
@@ -496,12 +496,12 @@ const Collection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold">Value Milestone</div>
-                    <div className="text-amber-200 text-sm">$20k+ collection</div>
+                    <div className="text-gray-400 text-sm">$20k+ collection</div>
                   </div>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     totalValue >= 20000 
-                      ? 'bg-amber-400' 
-                      : 'bg-amber-900'
+                      ? 'bg-yellow-500 text-gray-900' 
+                      : 'bg-gray-700 text-gray-400'
                   }`}>
                     {totalValue >= 20000 ? '✓' : '$'}
                   </div>
@@ -510,51 +510,51 @@ const Collection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold">Ancient Explorer</div>
-                    <div className="text-amber-200 text-sm">Collect ancient coins</div>
+                    <div className="text-gray-400 text-sm">Collect ancient coins</div>
                   </div>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                     collection.some(c => c.era === 'Ancient') 
-                      ? 'bg-amber-400' 
-                      : 'bg-amber-900'
+                      ? 'bg-yellow-500 text-gray-900' 
+                      : 'bg-gray-700 text-gray-400'
                   }`}>
                     {collection.some(c => c.era === 'Ancient') ? '✓' : '⚱️'}
                   </div>
                 </div>
               </div>
               
-              <div className="mt-6 pt-6 border-t border-amber-600">
+              <div className="mt-6 pt-6 border-t border-yellow-500/20">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">
+                  <div className="text-3xl font-bold text-yellow-300 mb-2">
                     {Math.round(([new Set(collection.map(c => c.era)).size >= 3, collection.filter(c => c.material === 'Gold').length >= 5, totalValue >= 20000, collection.some(c => c.era === 'Ancient')].filter(Boolean).length / 4) * 100)}%
                   </div>
-                  <div className="text-amber-200">Collection Complete</div>
+                  <div className="text-gray-400">Collection Complete</div>
                 </div>
               </div>
             </div>
 
             {/* Quick Stats */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-200 p-6">
-              <h3 className="text-xl font-bold text-amber-900 mb-6">Quick Stats</h3>
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-xl border border-yellow-500/20 p-6">
+              <h3 className="text-xl font-bold text-yellow-300 mb-6">Quick Stats</h3>
               
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-amber-700">Oldest Coin</span>
-                  <span className="font-bold text-amber-900">{oldestCoin.year}</span>
+                  <span className="text-gray-400">Oldest Coin</span>
+                  <span className="font-bold text-yellow-300">{oldestCoin.year}</span>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-amber-700">Most Valuable</span>
-                  <span className="font-bold text-amber-900">${highestValueCoin.price.toLocaleString()}</span>
+                  <span className="text-gray-400">Most Valuable</span>
+                  <span className="font-bold text-yellow-300">${highestValueCoin.price.toLocaleString()}</span>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-amber-700">Average Grade</span>
-                  <span className="font-bold text-amber-900">MS-65</span>
+                  <span className="text-gray-400">Average Grade</span>
+                  <span className="font-bold text-yellow-300">MS-65</span>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-amber-700">Collection Age</span>
-                  <span className="font-bold text-amber-900">2.5 years</span>
+                  <span className="text-gray-400">Collection Age</span>
+                  <span className="font-bold text-yellow-300">2.5 years</span>
                 </div>
               </div>
             </div>
@@ -563,16 +563,16 @@ const Collection: React.FC = () => {
 
         {/* Collection View Toggle */}
         <div className="flex justify-between items-center mt-8 mb-6">
-          <h2 className="text-2xl font-bold text-amber-900">My Coins ({filteredCollection.length})</h2>
+          <h2 className="text-2xl font-bold text-yellow-300">My Coins ({filteredCollection.length})</h2>
           <div className="flex gap-2">
             <button
-              className={`px-4 py-2 rounded-lg ${viewMode === 'grid' ? 'bg-amber-700 text-white' : 'bg-amber-100 text-amber-700'}`}
+              className={`px-4 py-2 rounded-lg ${viewMode === 'grid' ? 'bg-yellow-500 text-gray-900' : 'bg-gray-700 text-gray-300'}`}
               onClick={() => setViewMode('grid')}
             >
               Grid View
             </button>
             <button
-              className={`px-4 py-2 rounded-lg ${viewMode === 'list' ? 'bg-amber-700 text-white' : 'bg-amber-100 text-amber-700'}`}
+              className={`px-4 py-2 rounded-lg ${viewMode === 'list' ? 'bg-yellow-500 text-gray-900' : 'bg-gray-700 text-gray-300'}`}
               onClick={() => setViewMode('list')}
             >
               List View
@@ -585,22 +585,22 @@ const Collection: React.FC = () => {
           {filteredCollection.map((coin) => (
             <div 
               key={coin.id} 
-              className={`bg-white rounded-2xl shadow-lg border border-amber-200 overflow-hidden hover:shadow-xl transition-all duration-300 ${
+              className={`bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg border border-yellow-500/20 overflow-hidden hover:shadow-xl transition-all duration-300 ${
                 viewMode === 'list' ? 'flex' : ''
               }`}
             >
               <div className={`${viewMode === 'list' ? 'p-6 flex-1' : 'p-6'}`}>
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-amber-900">{coin.name}</h3>
+                    <h3 className="text-xl font-bold text-yellow-300">{coin.name}</h3>
                     <div className="flex items-center mt-1">
-                      <Calendar className="w-4 h-4 text-amber-600 mr-1" />
-                      <span className="text-sm text-amber-700">{coin.year} • {coin.era}</span>
+                      <Calendar className="w-4 h-4 text-yellow-500 mr-1" />
+                      <span className="text-sm text-gray-400">{coin.year} • {coin.era}</span>
                     </div>
                   </div>
                   <button
                     onClick={() => toggleFavorite(coin.id)}
-                    className="text-amber-600 hover:text-amber-800"
+                    className="text-yellow-500 hover:text-yellow-400"
                   >
                     <Heart 
                       className={`w-6 h-6 ${coin.favorite ? 'fill-current text-red-500' : ''}`}
@@ -609,35 +609,35 @@ const Collection: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="bg-amber-50 p-3 rounded-lg">
-                    <div className="text-sm text-amber-600">Value</div>
-                    <div className="text-2xl font-bold text-amber-800">${coin.price.toLocaleString()}</div>
+                  <div className="bg-gray-700/50 p-3 rounded-lg">
+                    <div className="text-sm text-gray-400">Value</div>
+                    <div className="text-2xl font-bold text-yellow-300">${coin.price.toLocaleString()}</div>
                   </div>
-                  <div className="bg-amber-50 p-3 rounded-lg">
-                    <div className="text-sm text-amber-600">Grade</div>
-                    <div className="text-lg font-semibold text-amber-800">{coin.grade}</div>
+                  <div className="bg-gray-700/50 p-3 rounded-lg">
+                    <div className="text-sm text-gray-400">Grade</div>
+                    <div className="text-lg font-semibold text-yellow-300">{coin.grade}</div>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center">
                     <div className={`w-4 h-4 rounded-full mr-2 ${materialColors[coin.material]}`}></div>
-                    <span className="font-semibold text-amber-700">{coin.material}</span>
+                    <span className="font-semibold text-gray-300">{coin.material}</span>
                   </div>
                   <div className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    coin.rarity === 'Very Rare' ? 'bg-amber-100 text-amber-800' :
-                    coin.rarity === 'Rare' ? 'bg-amber-100 text-amber-800' :
-                    'bg-amber-50 text-amber-700'
+                    coin.rarity === 'Very Rare' ? 'bg-yellow-500/20 text-yellow-300' :
+                    coin.rarity === 'Rare' ? 'bg-yellow-500/20 text-yellow-300' :
+                    'bg-gray-700 text-gray-400'
                   }`}>
                     {coin.rarity}
                   </div>
                 </div>
 
                 <div className="space-y-3">
-                  <button className="w-full bg-amber-700 text-white py-3 rounded-lg font-semibold hover:bg-amber-800 transition-all duration-300">
+                  <button className="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-300">
                     View Details
                   </button>
-                  <button className="w-full border-2 border-amber-700 text-amber-700 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-300">
+                  <button className="w-full border-2 border-yellow-500/20 text-yellow-300 py-3 rounded-lg font-semibold hover:bg-yellow-500/10 transition-colors duration-300">
                     Get Valuation Update
                   </button>
                 </div>
@@ -649,25 +649,25 @@ const Collection: React.FC = () => {
         {/* Empty State */}
         {filteredCollection.length === 0 && (
           <div className="text-center py-12">
-            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto">
-              <Search className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-amber-900 mb-2">No Coins Found</h3>
-              <p className="text-amber-600 mb-6">Try adjusting your filters to see your collection.</p>
+            <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl shadow-lg p-8 max-w-md mx-auto border border-yellow-500/20">
+              <Search className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-yellow-300 mb-2">No Coins Found</h3>
+              <p className="text-gray-400 mb-6">Try adjusting your filters to see your collection.</p>
             </div>
           </div>
         )}
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-gradient-to-r from-amber-800 to-amber-700 text-white py-12">
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-t border-yellow-500/20 text-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Get Professional Collection Appraisal</h2>
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold text-yellow-300 mb-4">Get Professional Collection Appraisal</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
             Certified valuation for insurance, inheritance, or sale purposes by our expert numismatists.
           </p>
           <a
-            href="mailto:Collectioncoinscraft@gmail.com?subject=Collection%20Appraisal%20Request"
-            className="inline-block bg-white text-amber-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-amber-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
+            href="mailto:roslandcapitaluk@gmail.com?subject=Collection%20Appraisal%20Request"
+            className="inline-block bg-yellow-500 text-gray-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
           >
             Request Professional Appraisal
           </a>

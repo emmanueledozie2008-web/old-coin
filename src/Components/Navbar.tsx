@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import icon from "../assets/icon.jpg";
+import icon from "../assets/WhatsApp Image 2026-03-03 at 5.57.28 PM.jpeg";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -17,12 +17,12 @@ const Navbar: React.FC = () => {
     `px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200
      ${
        isActive
-         ? "bg-amber-100 text-amber-900"
-         : "text-amber-900 hover:bg-amber-50 hover:text-amber-800"
+         ? "bg-yellow-500/20 text-yellow-300"
+         : "text-gray-300 hover:bg-yellow-500/10 hover:text-yellow-300"
      }`;
 
   return (
-    <nav className="bg-white shadow-lg border-b border-amber-100 fixed w-full top-0 z-50">
+    <nav className="bg-gradient-to-b from-gray-900 to-gray-800 border-b border-yellow-500/20 fixed w-full top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
 
@@ -30,17 +30,17 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <img
               src={icon}
-              alt="Abrahams Coin Collection Logo"
-              className="h-10 w-10 rounded-full border-2 border-amber-800 p-0.5"
+              alt="Rosland Capital Logo"
+              className="h-10 w-10 rounded-full border-2 border-yellow-500 p-0.5"
             />
             <div className="ml-3">
               <Link
                 to="/"
-                className="text-xl font-bold text-amber-900 hover:text-amber-700"
+                className="text-xl font-bold text-gray-100 hover:text-yellow-300 transition-colors"
               >
-                Abrahams Coin Collection
+                Rosland Capital Coin Collection
               </Link>
-              <p className="text-xs text-amber-600 hidden sm:block">
+              <p className="text-xs text-gray-400 hidden sm:block">
                 Trusted Numismatics Since 1995
               </p>
             </div>
@@ -64,10 +64,10 @@ const Navbar: React.FC = () => {
             <input
               type="text"
               placeholder="Search coins, years, mint..."
-              className="pl-4 pr-4 py-2 w-64 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-500 text-sm"
+              className="pl-4 pr-4 py-2 w-64 bg-gray-800 border border-yellow-500/20 rounded-lg focus:ring-2 focus:ring-yellow-500 text-gray-200 placeholder-gray-500 text-sm"
             />
             
-            <button className="px-4 py-2 bg-amber-700 text-white text-sm font-medium rounded-lg hover:bg-amber-800">
+            <button className="px-4 py-2 bg-yellow-500 text-gray-900 text-sm font-medium rounded-lg hover:bg-yellow-400 transition-colors">
               Get Appraised
             </button>
           </div>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
-              className="p-2 text-amber-700 hover:bg-amber-50 rounded-md"
+              className="p-2 text-gray-300 hover:bg-yellow-500/10 rounded-md"
             >
               {isMobileMenuOpen ? "✕" : "☰"}
             </button>
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-amber-100 shadow-xl">
+        <div className="lg:hidden bg-gray-800 border-t border-yellow-500/20 shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <NavLink
@@ -98,8 +98,8 @@ const Navbar: React.FC = () => {
                   `block px-3 py-2 rounded-md text-base font-medium transition-colors
                    ${
                      isActive
-                       ? "bg-amber-100 text-amber-900"
-                       : "text-amber-900 hover:bg-amber-50"
+                       ? "bg-yellow-500/20 text-yellow-300"
+                       : "text-gray-300 hover:bg-yellow-500/10 hover:text-yellow-300"
                    }`
                 }
               >

@@ -95,28 +95,30 @@ const steps = [
 
 const Body: React.FC = () => {
   return (
-    <div className="bg-amber-50">
-
+    <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
       {/* WHY CHOOSE US */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-amber-50 text-center px-4">
-        <Award className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-amber-700 mb-4 sm:mb-6" />
+      <section className="py-16 sm:py-20 bg-gray-900/50 text-center px-4 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')" }}></div>
+
+        <Award className="w-12 h-12 sm:w-16 sm:h-16 mx-auto text-yellow-400 mb-4 sm:mb-6" />
 
         <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6">
           Why Choose{" "}
-          <span className="text-amber-700">Abrahams Coin Collection?</span>
+          <span className="text-yellow-400">Rosland Capital?</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-10 relative z-10">
           {features.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="bg-white p-6 rounded-xl shadow-lg border border-amber-200"
+              className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-colors"
             >
-              <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600 mb-4 mx-auto" />
-              <h3 className="text-lg sm:text-xl font-bold text-amber-800 mb-2">
+              <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-400 mb-4 mx-auto" />
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-2">
                 {title}
               </h3>
-              <p className="text-sm sm:text-base text-amber-600">
+              <p className="text-sm sm:text-base text-gray-300">
                 {description}
               </p>
             </div>
@@ -125,34 +127,35 @@ const Body: React.FC = () => {
       </section>
 
       {/* FEATURED COINS */}
-      <section className="py-16 sm:py-20 bg-white px-4">
+      <section className="py-16 sm:py-20 bg-gray-800 px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
           {coins.map((coin) => (
             <div
               key={coin.title}
-              className="bg-gradient-to-br from-amber-50 to-white rounded-2xl shadow-xl border border-amber-200 p-6 sm:p-8"
+              className="bg-gray-900 rounded-2xl shadow-2xl border border-yellow-500/20 p-6 sm:p-8 hover:border-yellow-500/40 transition-all"
             >
               {/* Image */}
               <div className="flex justify-center sm:justify-start mb-4">
-                <img
-                  src={coin.image}
-                  alt={coin.title}
-                  className="w-20 h-20 rounded-lg"
-                />
-              </div>
+  <img
+    src="https://www.roslandcapitalgold.com/assets/img/gold.webp"
+    alt={coin?.title ? `${coin.title} gold coin` : "Gold coin image"}
+    className="w-20 h-20 rounded-lg ring-2 ring-yellow-500/30 object-cover"
+    loading="lazy"
+  />
+</div>
 
-              <span className="inline-block bg-amber-600 text-white text-xs px-3 py-1 rounded-full mb-3">
+              <span className="inline-block bg-yellow-500 text-gray-900 text-xs px-3 py-1 rounded-full mb-3 font-semibold">
                 {coin.badge}
               </span>
 
-              <h3 className="text-xl sm:text-2xl font-bold mb-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-100 mb-1">
                 {coin.title}
               </h3>
-              <p className="text-sm sm:text-base text-amber-700 mb-4">
+              <p className="text-sm sm:text-base text-yellow-300 mb-4">
                 {coin.subtitle}
               </p>
 
-              <p className="text-sm sm:text-base text-amber-700 mb-6">
+              <p className="text-sm sm:text-base text-gray-300 mb-6">
                 {coin.description}
               </p>
 
@@ -160,25 +163,25 @@ const Body: React.FC = () => {
                 {coin.specs.map((spec) => (
                   <div
                     key={spec.label}
-                    className="bg-amber-50 p-3 sm:p-4 rounded-lg"
+                    className="bg-gray-800 p-3 sm:p-4 rounded-lg border border-gray-700"
                   >
-                    <p className="text-xs sm:text-sm text-amber-600">
+                    <p className="text-xs sm:text-sm text-yellow-400">
                       {spec.label}
                     </p>
-                    <p className="text-sm sm:text-base font-bold">
+                    <p className="text-sm sm:text-base font-bold text-gray-100">
                       {spec.value}
                     </p>
-                  </div>
+              </div>
                 ))}
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-800">
+                <p className="text-2xl sm:text-3xl font-bold text-yellow-400">
                   {coin.price}
                 </p>
 
                 <Link to="/marketplace" className="w-full sm:w-auto">
-                  <button className="w-full sm:w-auto bg-amber-700 text-white px-6 py-3 rounded-xl hover:bg-amber-800 transition">
+                  <button className="w-full sm:w-auto bg-yellow-500 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-yellow-400 transition shadow-lg">
                     View Details
                   </button>
                 </Link>
@@ -189,38 +192,68 @@ const Body: React.FC = () => {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-amber-800 to-amber-600 text-white px-4">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {steps.map(({ number, icon: Icon, title, description, footer }) => (
             <div
               key={number}
-              className="relative bg-white/10 p-6 sm:p-8 rounded-2xl border border-white/20"
+              className="relative bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-yellow-500/20"
             >
-              <div className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 bg-amber-500 rounded-full flex items-center justify-center font-bold">
+              <div className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 bg-yellow-500 rounded-full flex items-center justify-center font-bold text-gray-900">
                 {number}
               </div>
 
-              <Icon className="w-12 h-12 sm:w-16 sm:h-16 text-amber-200 mb-4" />
+              <Icon className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-400 mb-4" />
 
-              <h3 className="text-lg sm:text-2xl font-bold mb-3">
+              <h3 className="text-lg sm:text-2xl font-bold text-yellow-300 mb-3">
                 {title}
               </h3>
 
-              <p className="text-sm sm:text-base text-amber-100 mb-4">
+              <p className="text-sm sm:text-base text-gray-300 mb-4">
                 {description}
               </p>
 
-              <p className="text-xs sm:text-sm font-semibold text-amber-200">
+              <p className="text-xs sm:text-sm font-semibold text-yellow-400">
                 {footer}
               </p>
             </div>
           ))}
         </div>
       </section>
-      <Footer/>
+
+      {/* MARKET INSIGHTS WIDGET - enhanced with dark theme */}
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800 border-t border-yellow-500/20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-3xl font-bold text-center mb-8 text-yellow-300">Market Insights Widget</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gray-800/80 p-6 rounded-lg backdrop-blur-sm border border-yellow-500/20 shadow-xl">
+              <DollarSign className="w-8 h-8 mb-2 text-yellow-400" />
+              <p className="text-sm uppercase tracking-wider text-gray-400">Gold (spot)</p>
+              <p className="text-2xl font-bold text-gray-100">$1,950.20</p>
+              <p className="text-sm text-green-400">+0.5%</p>
+            </div>
+            <div className="bg-gray-800/80 p-6 rounded-lg backdrop-blur-sm border border-yellow-500/20 shadow-xl">
+              <DollarSign className="w-8 h-8 mb-2 text-gray-400" />
+              <p className="text-sm uppercase tracking-wider text-gray-400">Silver (spot)</p>
+              <p className="text-2xl font-bold text-gray-100">$24.68</p>
+              <p className="text-sm text-red-400">-0.2%</p>
+            </div>
+            <div className="bg-gray-800/80 p-6 rounded-lg backdrop-blur-sm border border-yellow-500/20 shadow-xl">
+              <TrendingUp className="w-8 h-8 mb-2 text-green-400" />
+              <p className="text-sm uppercase tracking-wider text-gray-400">Platinum</p>
+              <p className="text-2xl font-bold text-gray-100">$980.50</p>
+              <p className="text-sm text-green-400">+0.3%</p>
+            </div>
+          </div>
+          <p className="text-center text-sm mt-6 text-gray-400">
+            Data updates every 5 minutes. For reference only.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
-
 
 export default Body;
